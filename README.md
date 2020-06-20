@@ -10,23 +10,15 @@ This document describes on how to provision network and resources common setup f
 
 Follows AWS Resources  best practices such as: - 
 
-Analysis 
-
-Design  
-
-Review the design Document  
-
-Coding and Testing  
-
-Finally, Jenkins Job run  
+1.Analysis  2.Design   3.Review the design Document 4.Coding and Testing  5. Finally, Jenkins Job run  
 
 Verify the results: -  
+ 
+================================================================================.
 
-  
+to create 3-Tier Architecture required tolls and technology :-
 
-3-Tier Architecture 
-
-Appropriate Routing in Route Table etc. 
+propriate Routing in Route Table etc. 
 
 what are the resources needed (VPC/CIDR/Autoscaling/Security groups /S3/DynamoDB tables etc.) 
 
@@ -37,10 +29,7 @@ Jenkins
 Terraform 
 
 BitBucket/GIT/GitHub(separate reops for the resources line terraform Layer code and terraform Module code) 
-
-  
-
-  
+ 
 
 for provisioning using IAC - terraform  
 
@@ -49,21 +38,12 @@ for provisioning using IAC - terraform
 Pre-Requisites 
 
 Need to create S3-Bucket and DynamoDB Table in "Central-iam" Account for saving terraform state file 
-
-                     Note: we are following below naming convention for s3 bucket and DynamoDB table creation 
-
-  
-
-                                      S3 Bucket name: s3-<account_name>-terraform-state  
-
-                                      DynamoDB table name:  <account_name>-terraform-state-lock 
-
-                                       
+  Note: we are following below naming convention for s3 bucket and DynamoDB table creation 
+        S3 Bucket name: s3-<account_name>-terraform-state 
+		DynamoDB table name:  <account_name>-terraform-state-lock                               
 
 If any shared service account using the following standard procedure. 
-
-  
-
+ 
 Jenkins user role "iam_role_jenkins_user" needs to have permissions to create "service-linked-role"(transitgateway.amazonaws.com) for Transit Gateway Attachment 
 
 Create a BitBucket repo for Layer Code (<account>-terraform-network (exp:- terraform-network)), this is for specifying account specific variable and inputs for global network module 
@@ -82,9 +62,7 @@ Manual creation of S3-Bucket and DynamoDB Lock table to save terraform state in 
 
 Run Jenkins Job to provision VPC and its resources in Target Account. 
 
- 
-
-  Updating Layer Code: 
+ Updating Layer Code: 
 
 Copy the files for Layer code from any existing repo. 
 

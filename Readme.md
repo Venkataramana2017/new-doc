@@ -14,7 +14,7 @@ Follows AWS Resources  best practices such as: -
  
 ================================================================================.
 
-to create 3-Tier Architecture required tools and technology :-
+To create 3-Tier Architecture required tools and technology :-
 
 AZ's - 	Availability Zone-A,
 	Availability Zone-B,
@@ -52,7 +52,8 @@ Create a BitBucket repo for Layer Code (<account>-terraform-network (exp:- terra
 
 If you are using any Shared-Services "SSH-Key" should be configured in BitBucket Repository Created above. This is required for Jenkins to clone the repo while running/executing the job Repositories 
 
-  Steps: 
+
+ Steps: 
 
 Create repositories for layer code 
 
@@ -99,19 +100,12 @@ role_arn = "arn:aws:iam::${lookup(var.target_account_id, terraform.workspace)}:r
 
   
 Modify "variables.tf" and update the values for below mentioned variable names: 
-
-
 vpc_cidr : CIDR Range that will be allowed by IMSD Group during Account Creation. 
-
 availability_zones: Based in requirement specify if you need 2 AZ or 3 AZ. This is also dependent on the region where Account is created. 
-
 subnets: We follow 3-Tier Architecture, we will have to plan the subnet bifurcation based on CIDR range.  
-
 subnet names: Please follow standard name, 
-
  privdmz_cidrs_routes: CIDR/IP Ranges that needs to be added in Private Route Table. 
-
-common_tags: Update "Project Name" details. 
+ common_tags: Update "Project Name" details. 
  
 
 final Steps:- 

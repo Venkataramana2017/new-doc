@@ -16,6 +16,10 @@ Follows AWS Resources  best practices such as: -
 
 to create 3-Tier Architecture required tools and technology :-
 
+AZ's - 	Availability Zone-A,
+	Availability Zone-B,
+	Availability Zone-C,
+
 apropriate Routing in Route Table etc. 
 
 what are the resources needed (VPC/CIDR/Autoscaling/Security groups /S3/DynamoDB tables etc.) 

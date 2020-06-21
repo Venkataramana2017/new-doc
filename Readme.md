@@ -10,15 +10,13 @@ This document describes on how to provision network and resources common setup f
 
 Follows AWS Resources  best practices such as: - 
 
-1.Analysis  2.Design   3.Review the design Document 4.Coding and Testing  5. Finally, Jenkins Job run  
-
-Verify the results: -  
+1.Analysis  2.Design   3.Review the design Document 4.Coding and Testing  5. Finally, Jenkins Job run  Verify the results. 
  
 ================================================================================.
 
-to create 3-Tier Architecture required tolls and technology :-
+to create 3-Tier Architecture required tools and technology :-
 
-propriate Routing in Route Table etc. 
+apropriate Routing in Route Table etc. 
 
 what are the resources needed (VPC/CIDR/Autoscaling/Security groups /S3/DynamoDB tables etc.) 
 
@@ -40,7 +38,7 @@ Pre-Requisites
 Need to create S3-Bucket and DynamoDB Table in "Central-iam" Account for saving terraform state file 
   Note: we are following below naming convention for s3 bucket and DynamoDB table creation 
         S3 Bucket name: s3-<account_name>-terraform-state 
-		DynamoDB table name:  <account_name>-terraform-state-lock                               
+	DynamoDB table name:  <account_name>-terraform-state-lock                               
 
 If any shared service account using the following standard procedure. 
  

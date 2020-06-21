@@ -100,11 +100,17 @@ role_arn = "arn:aws:iam::${lookup(var.target_account_id, terraform.workspace)}:r
 
   
 Modify "variables.tf" and update the values for below mentioned variable names: 
+
 vpc_cidr : CIDR Range that will be allowed by IMSD Group during Account Creation. 
+
 availability_zones: Based in requirement specify if you need 2 AZ or 3 AZ. This is also dependent on the region where Account is created. 
-subnets: We follow 3-Tier Architecture, we will have to plan the subnet bifurcation based on CIDR range.  
+
+subnets: We follow 3-Tier Architecture, we will have to plan the subnet bifurcation based on CIDR range. 
+
 subnet names: Please follow standard name, 
+
  privdmz_cidrs_routes: CIDR/IP Ranges that needs to be added in Private Route Table. 
+ 
  common_tags: Update "Project Name" details. 
  
 
